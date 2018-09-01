@@ -1,0 +1,80 @@
+\hypertarget{lib_8h}{}\section{Referência do Arquivo lib.\+h}
+\label{lib_8h}\index{lib.\+h@{lib.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$gts.\+h$>$}\\*
+Gráfico de dependência de inclusões para lib.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{lib_8h__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=126pt]{lib_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdbPoint}{db\+Point}
+\item 
+struct \hyperlink{structdbVertice}{db\+Vertice}
+\item 
+struct \hyperlink{structdbSegment}{db\+Segment}
+\item 
+struct \hyperlink{structdbEdge}{db\+Edge}
+\item 
+struct \hyperlink{structdbTriangle}{db\+Triangle}
+\item 
+struct \hyperlink{structdbFace}{db\+Face}
+\item 
+struct \hyperlink{structdbSurface}{db\+Surface}
+\end{DoxyCompactItemize}
+\subsection*{Definições de Tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structdbPoint}{db\+Point} \hyperlink{lib_8h_a6e636f3c7274f92304d9d27a69113609}{db\+Point}
+\item 
+typedef struct \hyperlink{structdbVertice}{db\+Vertice} \hyperlink{lib_8h_add1784c66680084dfa0471b2219ba2ce}{db\+Vertice}
+\item 
+typedef struct \hyperlink{structdbSegment}{db\+Segment} \hyperlink{lib_8h_af8d52ab5a8bc633defa9f0173bfff4ec}{db\+Segment}
+\item 
+typedef struct \hyperlink{structdbEdge}{db\+Edge} \hyperlink{lib_8h_a13cbf2b8bc3f4c8dbcec2cc7829af1f7}{db\+Edge}
+\item 
+typedef struct \hyperlink{structdbTriangle}{db\+Triangle} \hyperlink{lib_8h_a886a817b2f33af3a8d4127e64872a0ea}{db\+Triangle}
+\item 
+typedef struct \hyperlink{structdbFace}{db\+Face} \hyperlink{lib_8h_ad6a7a07c077313f533d08e35e4fb7dae}{db\+Face}
+\item 
+typedef struct \hyperlink{structdbSurface}{db\+Surface} \hyperlink{lib_8h_a746afe6b815c56aed82814c8986b8578}{db\+Surface}
+\end{DoxyCompactItemize}
+
+
+\subsection{Definições dos tipos}
+\index{lib.\+h@{lib.\+h}!db\+Edge@{db\+Edge}}
+\index{db\+Edge@{db\+Edge}!lib.\+h@{lib.\+h}}
+\subsubsection[{\texorpdfstring{db\+Edge}{dbEdge}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf db\+Edge} {\bf db\+Edge}}\hypertarget{lib_8h_a13cbf2b8bc3f4c8dbcec2cc7829af1f7}{}\label{lib_8h_a13cbf2b8bc3f4c8dbcec2cc7829af1f7}
+Declaração da estrutura aresta, onde esta contém três ponteiros do tipo \char`\"{}db\+Point\char`\"{} arestas que compõem um triângulo que apontam para edge1, edge2 e edge3; \index{lib.\+h@{lib.\+h}!db\+Face@{db\+Face}}
+\index{db\+Face@{db\+Face}!lib.\+h@{lib.\+h}}
+\subsubsection[{\texorpdfstring{db\+Face}{dbFace}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf db\+Face} {\bf db\+Face}}\hypertarget{lib_8h_ad6a7a07c077313f533d08e35e4fb7dae}{}\label{lib_8h_ad6a7a07c077313f533d08e35e4fb7dae}
+Declaração da estrutura face, onde \char`\"{}triangle\char`\"{} é uma triângulo do tipo \char`\"{}db\+Triangle\char`\"{} que no caso, é um triângulo que compõe uma face. \index{lib.\+h@{lib.\+h}!db\+Point@{db\+Point}}
+\index{db\+Point@{db\+Point}!lib.\+h@{lib.\+h}}
+\subsubsection[{\texorpdfstring{db\+Point}{dbPoint}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf db\+Point} {\bf db\+Point}}\hypertarget{lib_8h_a6e636f3c7274f92304d9d27a69113609}{}\label{lib_8h_a6e636f3c7274f92304d9d27a69113609}
+Declaração da estrutura ponto, onde esta contém os elementos x, y e z referentes ao espaço tridimensional; \index{lib.\+h@{lib.\+h}!db\+Segment@{db\+Segment}}
+\index{db\+Segment@{db\+Segment}!lib.\+h@{lib.\+h}}
+\subsubsection[{\texorpdfstring{db\+Segment}{dbSegment}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf db\+Segment} {\bf db\+Segment}}\hypertarget{lib_8h_af8d52ab5a8bc633defa9f0173bfff4ec}{}\label{lib_8h_af8d52ab5a8bc633defa9f0173bfff4ec}
+Declaração da estrutura segmento, onde esta contém dois ponteiros do tipo \char`\"{}db\+Vertice\char`\"{} que são os vértices de um segmento de reta; \index{lib.\+h@{lib.\+h}!db\+Surface@{db\+Surface}}
+\index{db\+Surface@{db\+Surface}!lib.\+h@{lib.\+h}}
+\subsubsection[{\texorpdfstring{db\+Surface}{dbSurface}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf db\+Surface} {\bf db\+Surface}}\hypertarget{lib_8h_a746afe6b815c56aed82814c8986b8578}{}\label{lib_8h_a746afe6b815c56aed82814c8986b8578}
+\index{lib.\+h@{lib.\+h}!db\+Triangle@{db\+Triangle}}
+\index{db\+Triangle@{db\+Triangle}!lib.\+h@{lib.\+h}}
+\subsubsection[{\texorpdfstring{db\+Triangle}{dbTriangle}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf db\+Triangle} {\bf db\+Triangle}}\hypertarget{lib_8h_a886a817b2f33af3a8d4127e64872a0ea}{}\label{lib_8h_a886a817b2f33af3a8d4127e64872a0ea}
+Declaração da estrutura triângulo, onde \char`\"{}e\char`\"{} é uma aresta, e esta estrutura contém três arestas do tipo \char`\"{}db\+Edge\char`\"{} arestas que compõem um triângulo. Esses ponteiros apontam para e1, e2 e e3; \index{lib.\+h@{lib.\+h}!db\+Vertice@{db\+Vertice}}
+\index{db\+Vertice@{db\+Vertice}!lib.\+h@{lib.\+h}}
+\subsubsection[{\texorpdfstring{db\+Vertice}{dbVertice}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf db\+Vertice} {\bf db\+Vertice}}\hypertarget{lib_8h_add1784c66680084dfa0471b2219ba2ce}{}\label{lib_8h_add1784c66680084dfa0471b2219ba2ce}
+Declaração da estrutura vértice, onde esta contém um ponteiro do tipo \char`\"{}db\+Point\char`\"{} que é o ponto do vértice. 

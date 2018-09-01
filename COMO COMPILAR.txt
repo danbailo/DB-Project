@@ -1,0 +1,8 @@
+pkg-config --cflags --libs glib-2.0
+
+# COMO COMPILAR DE FORMA CORRETA
+gcc $(pkg-config --cflags --libs glib-2.0) code.c
+
+gcc -I/usr/include/glib-2.0 lib.h
+
+gcc -I/usr/local/include/glib-2.0 -I/usr/local/lib/glib-2.0/include -L/usr/local/lib -lglib-2.0 lib.h

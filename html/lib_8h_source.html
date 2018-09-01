@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Projeto - ICC: Código-Fonte de lib.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projeto - ICC
+   &#160;<span id="projectnumber">1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Estruturas&#160;de&#160;Dados</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Globais</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">lib.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="lib_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;gts.h&gt;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="structdbPoint.html">    8</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structdbPoint.html">dbPoint</a>{</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structdbPoint.html#a4c9ad028a3c5d740f1fc0b15669c1c0f">    9</a></span>&#160;  GtsObject <a class="code" href="structdbPoint.html#a4c9ad028a3c5d740f1fc0b15669c1c0f">object</a>;</div><div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="structdbPoint.html#ab3e6ed577a7c669c19de1f9c1b46c872">   10</a></span>&#160;  <span class="keywordtype">double</span> <a class="code" href="structdbPoint.html#af88b946fb90d5f08b5fb740c70e98c10">x</a>,<a class="code" href="structdbPoint.html#ab927965981178aa1fba979a37168db2a">y</a>,<a class="code" href="structdbPoint.html#ab3e6ed577a7c669c19de1f9c1b46c872">z</a>;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}<a class="code" href="lib_8h.html#a6e636f3c7274f92304d9d27a69113609">dbPoint</a>;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structdbVertice.html">   18</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structdbVertice.html">dbVertice</a>{</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structdbVertice.html#a03ab875eb2041f01ba2b5b86d413896b">   19</a></span>&#160;  <a class="code" href="structdbPoint.html">dbPoint</a> <a class="code" href="structdbVertice.html#a03ab875eb2041f01ba2b5b86d413896b">p</a>;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structdbVertice.html#a0ae9e8feccea4307d768c5c1463f4d28">   21</a></span>&#160;  GSList* <a class="code" href="structdbVertice.html#a0ae9e8feccea4307d768c5c1463f4d28">segments</a>;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}<a class="code" href="lib_8h.html#add1784c66680084dfa0471b2219ba2ce">dbVertice</a>;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structdbSegment.html">   29</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structdbSegment.html">dbSegment</a>{</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="structdbSegment.html#a4c9ad028a3c5d740f1fc0b15669c1c0f">   30</a></span>&#160;  GtsObject <a class="code" href="structdbSegment.html#a4c9ad028a3c5d740f1fc0b15669c1c0f">object</a>;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structdbSegment.html#ac54d355714c397af2824dfa3743b0059">   32</a></span>&#160;  <a class="code" href="structdbVertice.html">dbVertice</a>* <a class="code" href="structdbSegment.html#ac54d355714c397af2824dfa3743b0059">v1</a>;</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structdbSegment.html#a63dc8509dabff387725bbdc284734f6a">   33</a></span>&#160;  <a class="code" href="structdbVertice.html">dbVertice</a>* <a class="code" href="structdbSegment.html#a63dc8509dabff387725bbdc284734f6a">v2</a>;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}<a class="code" href="lib_8h.html#af8d52ab5a8bc633defa9f0173bfff4ec">dbSegment</a>;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structdbEdge.html">   41</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structdbEdge.html">dbEdge</a>{</div><div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structdbEdge.html#a0886057d00d21df9488a339b5dd15f4a">   42</a></span>&#160;  <a class="code" href="structdbPoint.html">dbPoint</a>* <a class="code" href="structdbEdge.html#a0886057d00d21df9488a339b5dd15f4a">edge1</a>;</div><div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structdbEdge.html#a2b83dba0cd9a8636cdb2eee74a1c6573">   43</a></span>&#160;  <a class="code" href="structdbPoint.html">dbPoint</a>* <a class="code" href="structdbEdge.html#a2b83dba0cd9a8636cdb2eee74a1c6573">edge2</a>;</div><div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structdbEdge.html#a36b1358ac94b0054e16334e6727b6d2a">   44</a></span>&#160;  <a class="code" href="structdbPoint.html">dbPoint</a>* <a class="code" href="structdbEdge.html#a36b1358ac94b0054e16334e6727b6d2a">edge3</a>;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}<a class="code" href="lib_8h.html#a13cbf2b8bc3f4c8dbcec2cc7829af1f7">dbEdge</a>;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="structdbTriangle.html">   52</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structdbTriangle.html">dbTriangle</a>{</div><div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structdbTriangle.html#a4c9ad028a3c5d740f1fc0b15669c1c0f">   53</a></span>&#160;  GtsObject <a class="code" href="structdbTriangle.html#a4c9ad028a3c5d740f1fc0b15669c1c0f">object</a>;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div><div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="structdbTriangle.html#a038c41bf0720b16e63178f1915b0e455">   55</a></span>&#160;  <a class="code" href="structdbEdge.html">dbEdge</a>* <a class="code" href="structdbTriangle.html#a038c41bf0720b16e63178f1915b0e455">e1</a>;</div><div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="structdbTriangle.html#a0b0a41cfaeb4cee2ad5d8578359c61c8">   56</a></span>&#160;  <a class="code" href="structdbEdge.html">dbEdge</a>* <a class="code" href="structdbTriangle.html#a0b0a41cfaeb4cee2ad5d8578359c61c8">e2</a>;</div><div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="structdbTriangle.html#a5e66d5366546f4c9cd75c879bd054efd">   57</a></span>&#160;  <a class="code" href="structdbEdge.html">dbEdge</a>* <a class="code" href="structdbTriangle.html#a5e66d5366546f4c9cd75c879bd054efd">e3</a>;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}<a class="code" href="lib_8h.html#a886a817b2f33af3a8d4127e64872a0ea">dbTriangle</a>;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div><div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="structdbFace.html">   64</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structdbFace.html">dbFace</a>{</div><div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="structdbFace.html#a1600f7dbf1d0654be251c20dc049837c">   65</a></span>&#160;  <a class="code" href="structdbTriangle.html">dbTriangle</a> <a class="code" href="structdbFace.html#a1600f7dbf1d0654be251c20dc049837c">triangle</a>;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div><div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="structdbFace.html#a6018f19ec73ee7aa43998a9d763c635f">   67</a></span>&#160;  GSList * <a class="code" href="structdbFace.html#a6018f19ec73ee7aa43998a9d763c635f">surfaces</a>;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}<a class="code" href="lib_8h.html#ad6a7a07c077313f533d08e35e4fb7dae">dbFace</a>;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div><div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="structdbSurface.html">   71</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structdbSurface.html">dbSurface</a>{</div><div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="structdbSurface.html#a4c9ad028a3c5d740f1fc0b15669c1c0f">   72</a></span>&#160;  GtsObject <a class="code" href="structdbSurface.html#a4c9ad028a3c5d740f1fc0b15669c1c0f">object</a>;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#ifdef USE_SURFACE_BTREE</span></div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  GTree* faces;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#else </span><span class="comment">/* not USE_SURFACE_BTREE */</span><span class="preprocessor"></span></div><div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="structdbSurface.html#a2491590bd6d18542d6fab3090c43f646">   77</a></span>&#160;  GHashTable* <a class="code" href="structdbSurface.html#a2491590bd6d18542d6fab3090c43f646">faces</a>;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* not USE_SURFACE_BTREE */</span><span class="preprocessor"></span></div><div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="structdbSurface.html#a9bdc080583f3916fa54dff0733e84c22">   79</a></span>&#160;  GtsFaceClass* <a class="code" href="structdbSurface.html#a9bdc080583f3916fa54dff0733e84c22">face_class</a>;</div><div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="structdbSurface.html#aac3a854484328efcd046bed6b836ca03">   80</a></span>&#160;  GtsEdgeClass* <a class="code" href="structdbSurface.html#aac3a854484328efcd046bed6b836ca03">edge_class</a>;</div><div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="structdbSurface.html#a40aba9c5621bf74c8d649089e1a82529">   81</a></span>&#160;  GtsVertexClass* <a class="code" href="structdbSurface.html#a40aba9c5621bf74c8d649089e1a82529">vertex_class</a>;</div><div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="structdbSurface.html#a91e9416b378907785e1867c96a71e302">   82</a></span>&#160;  gboolean <a class="code" href="structdbSurface.html#a91e9416b378907785e1867c96a71e302">keep_faces</a>;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}<a class="code" href="lib_8h.html#a746afe6b815c56aed82814c8986b8578">dbSurface</a>;</div><div class="ttc" id="structdbPoint_html_ab3e6ed577a7c669c19de1f9c1b46c872"><div class="ttname"><a href="structdbPoint.html#ab3e6ed577a7c669c19de1f9c1b46c872">dbPoint::z</a></div><div class="ttdeci">double z</div><div class="ttdef"><b>Definition:</b> lib.h:10</div></div>
+<div class="ttc" id="lib_8h_html_add1784c66680084dfa0471b2219ba2ce"><div class="ttname"><a href="lib_8h.html#add1784c66680084dfa0471b2219ba2ce">dbVertice</a></div><div class="ttdeci">struct dbVertice dbVertice</div></div>
+<div class="ttc" id="structdbSurface_html_a4c9ad028a3c5d740f1fc0b15669c1c0f"><div class="ttname"><a href="structdbSurface.html#a4c9ad028a3c5d740f1fc0b15669c1c0f">dbSurface::object</a></div><div class="ttdeci">GtsObject object</div><div class="ttdef"><b>Definition:</b> lib.h:72</div></div>
+<div class="ttc" id="structdbSegment_html_a63dc8509dabff387725bbdc284734f6a"><div class="ttname"><a href="structdbSegment.html#a63dc8509dabff387725bbdc284734f6a">dbSegment::v2</a></div><div class="ttdeci">dbVertice * v2</div><div class="ttdef"><b>Definition:</b> lib.h:33</div></div>
+<div class="ttc" id="structdbSurface_html_a2491590bd6d18542d6fab3090c43f646"><div class="ttname"><a href="structdbSurface.html#a2491590bd6d18542d6fab3090c43f646">dbSurface::faces</a></div><div class="ttdeci">GHashTable * faces</div><div class="ttdef"><b>Definition:</b> lib.h:77</div></div>
+<div class="ttc" id="lib_8h_html_a6e636f3c7274f92304d9d27a69113609"><div class="ttname"><a href="lib_8h.html#a6e636f3c7274f92304d9d27a69113609">dbPoint</a></div><div class="ttdeci">struct dbPoint dbPoint</div></div>
+<div class="ttc" id="structdbVertice_html_a03ab875eb2041f01ba2b5b86d413896b"><div class="ttname"><a href="structdbVertice.html#a03ab875eb2041f01ba2b5b86d413896b">dbVertice::p</a></div><div class="ttdeci">dbPoint p</div><div class="ttdef"><b>Definition:</b> lib.h:19</div></div>
+<div class="ttc" id="structdbTriangle_html_a5e66d5366546f4c9cd75c879bd054efd"><div class="ttname"><a href="structdbTriangle.html#a5e66d5366546f4c9cd75c879bd054efd">dbTriangle::e3</a></div><div class="ttdeci">dbEdge * e3</div><div class="ttdef"><b>Definition:</b> lib.h:57</div></div>
+<div class="ttc" id="structdbPoint_html_a4c9ad028a3c5d740f1fc0b15669c1c0f"><div class="ttname"><a href="structdbPoint.html#a4c9ad028a3c5d740f1fc0b15669c1c0f">dbPoint::object</a></div><div class="ttdeci">GtsObject object</div><div class="ttdef"><b>Definition:</b> lib.h:9</div></div>
+<div class="ttc" id="structdbSurface_html_a9bdc080583f3916fa54dff0733e84c22"><div class="ttname"><a href="structdbSurface.html#a9bdc080583f3916fa54dff0733e84c22">dbSurface::face_class</a></div><div class="ttdeci">GtsFaceClass * face_class</div><div class="ttdef"><b>Definition:</b> lib.h:79</div></div>
+<div class="ttc" id="structdbSurface_html"><div class="ttname"><a href="structdbSurface.html">dbSurface</a></div><div class="ttdef"><b>Definition:</b> lib.h:71</div></div>
+<div class="ttc" id="structdbTriangle_html_a4c9ad028a3c5d740f1fc0b15669c1c0f"><div class="ttname"><a href="structdbTriangle.html#a4c9ad028a3c5d740f1fc0b15669c1c0f">dbTriangle::object</a></div><div class="ttdeci">GtsObject object</div><div class="ttdef"><b>Definition:</b> lib.h:53</div></div>
+<div class="ttc" id="structdbEdge_html_a2b83dba0cd9a8636cdb2eee74a1c6573"><div class="ttname"><a href="structdbEdge.html#a2b83dba0cd9a8636cdb2eee74a1c6573">dbEdge::edge2</a></div><div class="ttdeci">dbPoint * edge2</div><div class="ttdef"><b>Definition:</b> lib.h:43</div></div>
+<div class="ttc" id="structdbEdge_html_a36b1358ac94b0054e16334e6727b6d2a"><div class="ttname"><a href="structdbEdge.html#a36b1358ac94b0054e16334e6727b6d2a">dbEdge::edge3</a></div><div class="ttdeci">dbPoint * edge3</div><div class="ttdef"><b>Definition:</b> lib.h:44</div></div>
+<div class="ttc" id="structdbTriangle_html_a038c41bf0720b16e63178f1915b0e455"><div class="ttname"><a href="structdbTriangle.html#a038c41bf0720b16e63178f1915b0e455">dbTriangle::e1</a></div><div class="ttdeci">dbEdge * e1</div><div class="ttdef"><b>Definition:</b> lib.h:55</div></div>
+<div class="ttc" id="structdbSurface_html_aac3a854484328efcd046bed6b836ca03"><div class="ttname"><a href="structdbSurface.html#aac3a854484328efcd046bed6b836ca03">dbSurface::edge_class</a></div><div class="ttdeci">GtsEdgeClass * edge_class</div><div class="ttdef"><b>Definition:</b> lib.h:80</div></div>
+<div class="ttc" id="lib_8h_html_ad6a7a07c077313f533d08e35e4fb7dae"><div class="ttname"><a href="lib_8h.html#ad6a7a07c077313f533d08e35e4fb7dae">dbFace</a></div><div class="ttdeci">struct dbFace dbFace</div></div>
+<div class="ttc" id="structdbSurface_html_a91e9416b378907785e1867c96a71e302"><div class="ttname"><a href="structdbSurface.html#a91e9416b378907785e1867c96a71e302">dbSurface::keep_faces</a></div><div class="ttdeci">gboolean keep_faces</div><div class="ttdef"><b>Definition:</b> lib.h:82</div></div>
+<div class="ttc" id="structdbPoint_html_af88b946fb90d5f08b5fb740c70e98c10"><div class="ttname"><a href="structdbPoint.html#af88b946fb90d5f08b5fb740c70e98c10">dbPoint::x</a></div><div class="ttdeci">double x</div><div class="ttdef"><b>Definition:</b> lib.h:10</div></div>
+<div class="ttc" id="lib_8h_html_a13cbf2b8bc3f4c8dbcec2cc7829af1f7"><div class="ttname"><a href="lib_8h.html#a13cbf2b8bc3f4c8dbcec2cc7829af1f7">dbEdge</a></div><div class="ttdeci">struct dbEdge dbEdge</div></div>
+<div class="ttc" id="lib_8h_html_af8d52ab5a8bc633defa9f0173bfff4ec"><div class="ttname"><a href="lib_8h.html#af8d52ab5a8bc633defa9f0173bfff4ec">dbSegment</a></div><div class="ttdeci">struct dbSegment dbSegment</div></div>
+<div class="ttc" id="structdbSegment_html"><div class="ttname"><a href="structdbSegment.html">dbSegment</a></div><div class="ttdef"><b>Definition:</b> lib.h:29</div></div>
+<div class="ttc" id="structdbEdge_html_a0886057d00d21df9488a339b5dd15f4a"><div class="ttname"><a href="structdbEdge.html#a0886057d00d21df9488a339b5dd15f4a">dbEdge::edge1</a></div><div class="ttdeci">dbPoint * edge1</div><div class="ttdef"><b>Definition:</b> lib.h:42</div></div>
+<div class="ttc" id="structdbPoint_html_ab927965981178aa1fba979a37168db2a"><div class="ttname"><a href="structdbPoint.html#ab927965981178aa1fba979a37168db2a">dbPoint::y</a></div><div class="ttdeci">double y</div><div class="ttdef"><b>Definition:</b> lib.h:10</div></div>
+<div class="ttc" id="structdbSegment_html_ac54d355714c397af2824dfa3743b0059"><div class="ttname"><a href="structdbSegment.html#ac54d355714c397af2824dfa3743b0059">dbSegment::v1</a></div><div class="ttdeci">dbVertice * v1</div><div class="ttdef"><b>Definition:</b> lib.h:32</div></div>
+<div class="ttc" id="structdbFace_html_a1600f7dbf1d0654be251c20dc049837c"><div class="ttname"><a href="structdbFace.html#a1600f7dbf1d0654be251c20dc049837c">dbFace::triangle</a></div><div class="ttdeci">dbTriangle triangle</div><div class="ttdef"><b>Definition:</b> lib.h:65</div></div>
+<div class="ttc" id="structdbTriangle_html_a0b0a41cfaeb4cee2ad5d8578359c61c8"><div class="ttname"><a href="structdbTriangle.html#a0b0a41cfaeb4cee2ad5d8578359c61c8">dbTriangle::e2</a></div><div class="ttdeci">dbEdge * e2</div><div class="ttdef"><b>Definition:</b> lib.h:56</div></div>
+<div class="ttc" id="structdbVertice_html_a0ae9e8feccea4307d768c5c1463f4d28"><div class="ttname"><a href="structdbVertice.html#a0ae9e8feccea4307d768c5c1463f4d28">dbVertice::segments</a></div><div class="ttdeci">GSList * segments</div><div class="ttdef"><b>Definition:</b> lib.h:21</div></div>
+<div class="ttc" id="structdbSurface_html_a40aba9c5621bf74c8d649089e1a82529"><div class="ttname"><a href="structdbSurface.html#a40aba9c5621bf74c8d649089e1a82529">dbSurface::vertex_class</a></div><div class="ttdeci">GtsVertexClass * vertex_class</div><div class="ttdef"><b>Definition:</b> lib.h:81</div></div>
+<div class="ttc" id="structdbVertice_html"><div class="ttname"><a href="structdbVertice.html">dbVertice</a></div><div class="ttdef"><b>Definition:</b> lib.h:18</div></div>
+<div class="ttc" id="structdbSegment_html_a4c9ad028a3c5d740f1fc0b15669c1c0f"><div class="ttname"><a href="structdbSegment.html#a4c9ad028a3c5d740f1fc0b15669c1c0f">dbSegment::object</a></div><div class="ttdeci">GtsObject object</div><div class="ttdef"><b>Definition:</b> lib.h:30</div></div>
+<div class="ttc" id="structdbFace_html_a6018f19ec73ee7aa43998a9d763c635f"><div class="ttname"><a href="structdbFace.html#a6018f19ec73ee7aa43998a9d763c635f">dbFace::surfaces</a></div><div class="ttdeci">GSList * surfaces</div><div class="ttdef"><b>Definition:</b> lib.h:67</div></div>
+<div class="ttc" id="structdbTriangle_html"><div class="ttname"><a href="structdbTriangle.html">dbTriangle</a></div><div class="ttdef"><b>Definition:</b> lib.h:52</div></div>
+<div class="ttc" id="structdbPoint_html"><div class="ttname"><a href="structdbPoint.html">dbPoint</a></div><div class="ttdef"><b>Definition:</b> lib.h:8</div></div>
+<div class="ttc" id="structdbEdge_html"><div class="ttname"><a href="structdbEdge.html">dbEdge</a></div><div class="ttdef"><b>Definition:</b> lib.h:41</div></div>
+<div class="ttc" id="structdbFace_html"><div class="ttname"><a href="structdbFace.html">dbFace</a></div><div class="ttdef"><b>Definition:</b> lib.h:64</div></div>
+<div class="ttc" id="lib_8h_html_a746afe6b815c56aed82814c8986b8578"><div class="ttname"><a href="lib_8h.html#a746afe6b815c56aed82814c8986b8578">dbSurface</a></div><div class="ttdeci">struct dbSurface dbSurface</div></div>
+<div class="ttc" id="lib_8h_html_a886a817b2f33af3a8d4127e64872a0ea"><div class="ttname"><a href="lib_8h.html#a886a817b2f33af3a8d4127e64872a0ea">dbTriangle</a></div><div class="ttdeci">struct dbTriangle dbTriangle</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>
