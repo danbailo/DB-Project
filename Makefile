@@ -1,10 +1,15 @@
+SRC = ./src
+INCLUDE = ./include
+BIN = ./bin
+BUILD = ./build
+
 all:
-	gcc -c ./src/soma.c -I ./include -o ./build/soma.o
-	gcc ./src/main.c ./build/*.o -I ./include -o ./bin/main 
+	gcc -c $(SRC)/soma.c -I $(INCLUDE) -o $(BUILD)/soma.o
+	gcc $(SRC)/main.c ./build/*.o -I $(INCLUDE) -o $(BIN)/main 
 
 run:
-	./bin/main
+	$(BIN)/main
 
 clean:
-	rm ./build/*.o
-	rm ./bin/main
+	rm $(BUILD)/*.o
+	rm $(BIN)/main
