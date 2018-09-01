@@ -11,7 +11,7 @@
 int main(int argc, char const *argv[]){
 	
 	printf("Soma: %d\n", soma(4,5));
-	printf("Subtracao: %d\n", subtracao(4,5));
+	printf("Subtracao: %d\n", subtracao(9,5));
 
 	return 0;
 }
