@@ -8,7 +8,7 @@ typedef struct dbPoint{
 
   double x,y,z;
 
-}*dbPoint;
+}dbPoint;
 
 void getPoint(double x1, double y1, double z1);
 int readPoint(const char* str);
