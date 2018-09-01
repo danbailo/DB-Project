@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <gts.h>
+#include "gts.h"
 
 /*! Declaração da estrutura ponto, onde esta
   * contém os elementos x, y e z referentes ao espaço tridimensional;
   */
 typedef struct dbPoint{
-  GtsObject object;
+
   double x,y,z;
+
 }dbPoint;
 
 
@@ -16,9 +17,9 @@ typedef struct dbPoint{
   *
   */
 typedef struct dbVertice{
+
   dbPoint p;
 
-  GSList* segments;
 }dbVertice;
 
 
@@ -27,10 +28,10 @@ typedef struct dbVertice{
   * segmento de reta;
   */
 typedef struct dbSegment{
-  GtsObject object;
 
   dbVertice* v1;
   dbVertice* v2;
+
 }dbSegment;
 
 
@@ -39,9 +40,9 @@ typedef struct dbSegment{
   * que apontam para edge1, edge2 e edge3;
   */
 typedef struct dbEdge{
-  dbPoint* edge1;
-  dbPoint* edge2;
-  dbPoint* edge3;
+
+  dbSegment segment;
+
 }dbEdge;
 
 
@@ -50,11 +51,11 @@ typedef struct dbEdge{
   * Esses ponteiros apontam para e1, e2 e e3;
   */
 typedef struct dbTriangle{
-  GtsObject object;
 
   dbEdge* e1;
   dbEdge* e2;
   dbEdge* e3;
+
 }dbTriangle;
 
 
@@ -62,9 +63,9 @@ typedef struct dbTriangle{
   * "dbTriangle" que no caso, é um triângulo que compõe uma face.
   */
 typedef struct dbFace{
+
   dbTriangle triangle;
 
-  GSList * surfaces;
 }dbFace;
 
 
