@@ -10,8 +10,8 @@ all: libdb main
 
 #Recompila/atualiza as headers e funcoes passadas aq
 libdb: \
-	$(BUILD)/soma.o \
-	$(BUILD)/subtracao.o
+	$(BUILD)/listarchive.o \
+	$(BUILD)/dbPoint.o 
 	ar -rcs $(LIB)/libdb.a $(BUILD)/*.o
 
 
