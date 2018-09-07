@@ -20,7 +20,5 @@ int main(int argc, char *argv[]){
 
 	print_list(l);
 
-	printf("x begin: %lf\n",l->begin->next->next->point.x);
-
 	return 0;
 }
