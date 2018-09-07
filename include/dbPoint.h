@@ -11,7 +11,7 @@ typedef struct dbPoint{
 }dbPoint;
 
 void getPoint(double x1, double y1, double z1);
-int readPoint(const char* str);
+int readPoint(dbPoint *p,const char* str);
 void printPoint();
 
 #endif /*DBPOINT_H*/

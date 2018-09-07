@@ -7,22 +7,20 @@
 // #include "dbTriangle.h"
 // #include "dbFace.h"
 
-int main(int argc, char const *argv[]){
+int main(int argc, char *argv[]){
 
-	linked_list.l = create_list();
-	read_archive("arquivo.txt");
+	if(argc != 2){
+		printf("[USO] %s [ARQUIVO].\n",argv[0]);
+		return -1;
+	}
+	list *l = create_list();
 
-	print_list(linked_list.l);
 
-	printf("\nsize:%d\n",linked_list.l->size);
-	
-	printf("\nindex from the first node:%d\n",linked_list.l->begin->index);
-	printf("\nindex from the last node:%d\n",linked_list.l->end->index);
+	list_archive(l,argv[1]);
 
-	printf("\nx:%lf,y;%lf,z:%lf\n",linked_list.l->end->x,linked_list.l->end->y,linked_list.l->end->z);
-	printf("\n");
+	// read_archive("arquivo.txt");
 
-	return 0;
+	print_list(l);
 
 	return 0;
 }
