@@ -13,14 +13,14 @@ int main(int argc, char *argv[]){
 		printf("[USO] %s [ARQUIVO].\n",argv[0]);
 		return -1;
 	}
-	list *l = create_list();
 
+	list *l = create_list();
 
 	list_archive(l,argv[1]);
 
-	// read_archive("arquivo.txt");
-
 	print_list(l);
+
+	printf("x begin: %lf\n",l->begin->next->next->point.x);
 
 	return 0;
 }
