@@ -1,6 +1,6 @@
 #include <stdio.h>
-// #include "dbPoint.h"
 #include "listarchive.h"
+// #include "dbPoint.h"
 // #include "dbVertice.h"
 // #include "dbSegment.h"
 // #include "dbEdge.h"
