@@ -2,9 +2,7 @@
 #define _DB_EDGE_
 
 #include "dbPoint.h"
-#include "dbVertice.h"
-#include "dbTriangle.h"
-#include "dbSurface.h"
+#include "dbVertex.h"
 #include "uthash.h"
 
 /*! Declaração da estrutura vértice, onde esta
@@ -13,9 +11,9 @@
   */
 typedef struct dbEdge{
 
-    dbVertice *v1;
-    dbVertice *v2;
- 	int VertexID[2];
+    dbVertex *v1;
+    dbVertex *v2;
+ 	// int VertexID[2];
 
  	// dbTriangle *t1;
  	// dbTriangle *t2;

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "dbPoint.h"
-#include "dbVertices.h"
-// #include "dbEdge.h"
+#include "dbVertex.h"
+#include "dbEdge.h"
 // #include "dbTriangle.h"
 // #include "dbSurface.h"
 
@@ -20,11 +20,15 @@ int main(int argc, char *argv[]){
 
     printf("\nVertices\n");
 
-    dbVertices* VERTICES_HASH = getVertex("vertices.txt");
+    dbVertex* VERTICES_HASH = getVertex("vertices.txt");
 
-	for(dbVertices* v=VERTICES_HASH; v != NULL; v=(dbVertices*)(v->hh.next)) {
+	for(dbVertex* v=VERTICES_HASH; v != NULL; v=(dbVertex*)(v->hh.next)) {
         printf("%.lf %.lf %.lf\n",v->v1,v->v2,v->v3);
     }
+
+    printf("\n%lf\n",VERTICES_HASH->v1);
+    VERTICES_HASH = VERTICES_HASH->hh.next;
+    printf("\n%lf\n",VERTICES_HASH->v1);
 
 	return 0;
 }

@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include "dbPoint.h"
-#include "dbVertices.h"
+#include "dbVertex.h"
 
-dbVertices* getVertex(const char* arc){
-	dbVertices* ans=NULL;
+dbVertex* getVertex(const char* arc){
+	dbVertex* ans=NULL;
 	FILE *f = fopen(arc,"r");
-	dbVertices* vaux;
+	dbVertex* vaux;
 
 	if(!f){
 		printf("nao abri o arquivo");
@@ -25,14 +25,14 @@ dbVertices* getVertex(const char* arc){
 		char *buff = str;
 		int j = 0;
 		while(1){
-			vaux=(dbVertices*)malloc(sizeof(dbVertices));
+			vaux=(dbVertex*)malloc(sizeof(dbVertex));
 		    buff+=n;
 
 		    int res=sscanf(buff,"%lf %lf %lf%n",&vaux->v1,&vaux->v2,&vaux->v3,&n);
 		    if(res!=3) break;  
 			vaux->id=item;
 			item++;
-			dbVertices* s;
+			dbVertex* s;
   			HASH_FIND_INT(ans, &vaux->id, s);
   			if(s!=NULL){
   				printf("colisão!\n");exit(-1);

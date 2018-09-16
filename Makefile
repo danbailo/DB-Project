@@ -12,8 +12,8 @@ all: libdb main
 #Recompila/atualiza as headers e funcoes passadas aq
 libdb: \
 	$(BUILD)/dbPoint.o \
-	$(BUILD)/dbVertices.o \
-	# $(BUILD)/dbEdge.o \
+	$(BUILD)/dbVertex.o \
+	$(BUILD)/dbEdge.o \
 	# $(BUILD)/dbTriangle.o \
 	# $(BUILD)/dbSurface.o \
 	
