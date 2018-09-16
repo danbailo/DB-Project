@@ -10,8 +10,9 @@
 
 int main(int argc, char *argv[]){
 
-	dbPoint* TABELARESHI=getPoint("points_sphere.txt");
-	for(dbPoint* s=TABELARESHI; s != NULL; s=(dbPoint*)(s->hh.next)) {
+	dbPoint* POINTS_HASH = getPoint("points_sphere.txt");
+
+	for(dbPoint* s=POINTS_HASH; s != NULL; s=(dbPoint*)(s->hh.next)) {
         printf("%lf %lf %lf\n",s->x,s->y,s->z);
     }
 	return 0;
