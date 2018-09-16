@@ -1,5 +1,8 @@
-#ifndef DB_VERTICE_H
-#define DB_VERTICE_H
+#ifndef _DB_VERTICE_H_
+#define _DB_VERTICE_H_
+
+// #include "dbPoint.h"
+#include "uthash.h"
 
 /*! Declaração da estrutura vértice, onde esta
   * contém um ponteiro do tipo "dbPoint" que é o ponto do vértice.
@@ -7,11 +10,13 @@
   */
 typedef struct dbVertice{
 
-  dbPoint p;
-  
-  list *segmentos;
+	dbPoint p;
+
+	/* For hashtable */
+	int id;
+	UT_hash_handle hh;
 
 
 }dbVertice;
 
-#endif /*DB_VERTICE_H*/
+#endif /*_DB_VERTICE_H_*/

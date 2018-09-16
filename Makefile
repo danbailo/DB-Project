@@ -3,6 +3,7 @@ INCLUDE = ./include
 BIN 	= ./bin
 BUILD 	= ./build
 LIB		= ./lib
+CC		= gcc #compiler
 FLAGS	= -O3 -Wall -std=c99
 LIBS	= -lm -ldb -L $(LIB)
 
@@ -10,8 +11,12 @@ all: libdb main
 
 #Recompila/atualiza as headers e funcoes passadas aq
 libdb: \
-	$(BUILD)/listarchive.o \
-	$(BUILD)/dbPoint.o 
+	$(BUILD)/dbPoint.o \
+	#$(BUILD)/dbVertice.o \
+	#$(BUILD)/dbEdge.o \
+	#$(BUILD)/dbTriangle.o \
+	#$(BUILD)/dbSurface.o \
+	
 	ar -rcs $(LIB)/libdb.a $(BUILD)/*.o
 
 
@@ -19,11 +24,11 @@ main: $(BIN)/main
 
 
 $(BUILD)/%.o: $(SRC)/%.c $(INCLUDE)/%.h
-	gcc $(FLAGS) -c $< -I $(INCLUDE) -o $@
+	$(CC) $(FLAGS) -c $< -I $(INCLUDE) -o $@
 
 
 $(BIN)/%: $(SRC)/%.c
-	gcc $(FLAGS) $< -I $(INCLUDE) $(LIBS) -o $@
+	$(CC) $(FLAGS) $< -I $(INCLUDE) $(LIBS) -o $@
 
 
 run:
