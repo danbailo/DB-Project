@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "dbPoint.h"
-// #include "dbVertice.h"
+#include "dbVertices.h"
 // #include "dbEdge.h"
 // #include "dbTriangle.h"
 // #include "dbSurface.h"
@@ -10,10 +10,21 @@
 
 int main(int argc, char *argv[]){
 
-	dbPoint* POINTS_HASH = getPoint("points_sphere.txt");
+    printf("\nPoints\n");
 
-	for(dbPoint* s=POINTS_HASH; s != NULL; s=(dbPoint*)(s->hh.next)) {
-        printf("%lf %lf %lf\n",s->x,s->y,s->z);
+	dbPoint* POINTS_HASH = getPoint("points.txt");
+
+	for(dbPoint* p=POINTS_HASH; p != NULL; p=(dbPoint*)(p->hh.next)) {
+        printf("%lf %lf %lf\n",p->x,p->y,p->z);
     }
+
+    printf("\nVertices\n");
+
+    dbVertices* VERTICES_HASH = getVertex("vertices.txt");
+
+	for(dbVertices* v=VERTICES_HASH; v != NULL; v=(dbVertices*)(v->hh.next)) {
+        printf("%.lf %.lf %.lf\n",v->v1,v->v2,v->v3);
+    }
+
 	return 0;
 }

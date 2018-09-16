@@ -1,7 +1,10 @@
 #ifndef _DB_EDGE_
 #define _DB_EDGE_
 
+#include "dbPoint.h"
 #include "dbVertice.h"
+#include "dbTriangle.h"
+#include "dbSurface.h"
 #include "uthash.h"
 
 /*! Declaração da estrutura vértice, onde esta

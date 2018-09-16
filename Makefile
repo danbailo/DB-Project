@@ -12,10 +12,10 @@ all: libdb main
 #Recompila/atualiza as headers e funcoes passadas aq
 libdb: \
 	$(BUILD)/dbPoint.o \
-	#$(BUILD)/dbVertice.o \
-	#$(BUILD)/dbEdge.o \
-	#$(BUILD)/dbTriangle.o \
-	#$(BUILD)/dbSurface.o \
+	$(BUILD)/dbVertices.o \
+	# $(BUILD)/dbEdge.o \
+	# $(BUILD)/dbTriangle.o \
+	# $(BUILD)/dbSurface.o \
 	
 	ar -rcs $(LIB)/libdb.a $(BUILD)/*.o
 

@@ -1,12 +1,11 @@
 #include <stdio.h>
-#include "uthash.h"
 #include "dbPoint.h"
-// #include "dbSurface.h"
+#include "dbVertices.h"
 
-dbPoint* getPoint(const char* arc){
-	dbPoint* ans=NULL;
+dbVertices* getVertex(const char* arc){
+	dbVertices* ans=NULL;
 	FILE *f = fopen(arc,"r");
-	dbPoint *paux;
+	dbVertices* vaux;
 
 	if(!f){
 		printf("nao abri o arquivo");
@@ -26,20 +25,20 @@ dbPoint* getPoint(const char* arc){
 		char *buff = str;
 		int j = 0;
 		while(1){
-			paux=(dbPoint*)malloc(sizeof(dbPoint));
+			vaux=(dbVertices*)malloc(sizeof(dbVertices));
 		    buff+=n;
 
-		    int res=sscanf(buff,"%lf %lf %lf%n",&paux->x,&paux->y,&paux->z,&n);
+		    int res=sscanf(buff,"%lf %lf %lf%n",&vaux->v1,&vaux->v2,&vaux->v3,&n);
 		    if(res!=3) break;  
-			paux->id=item;
+			vaux->id=item;
 			item++;
-			dbPoint*s;
-  			HASH_FIND_INT(ans, &paux->id, s);
+			dbVertices* s;
+  			HASH_FIND_INT(ans, &vaux->id, s);
   			if(s!=NULL){
   				printf("colisão!\n");exit(-1);
   			}
 
-		    HASH_ADD_INT(ans, id, paux);
+		    HASH_ADD_INT(ans, id, vaux);
 		    
 			j++;
 		}

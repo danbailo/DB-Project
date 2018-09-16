@@ -1,8 +1,10 @@
 #ifndef _DB_TRIANGLE_
 #define _DB_TRIANGLE_
 
+#include "dbPoint.h"
 #include "dbVertice.h"
 #include "dbEdge.h"
+#include "dbSurface.h"
 #include "uthash.h"
 
 /* Defines the structure of a triangle. A triangle consists of 3 edges. Moreover, a triangle has 3 vertices */

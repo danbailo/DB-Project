@@ -1,22 +1,24 @@
-#ifndef _DB_VERTICE_H_
-#define _DB_VERTICE_H_
+#ifndef _DB_VERTICES_H_
+#define _DB_VERTICES_H_
 
-// #include "dbPoint.h"
+#include "dbPoint.h"
 #include "uthash.h"
 
 /*! Declaração da estrutura vértice, onde esta
   * contém um ponteiro do tipo "dbPoint" que é o ponto do vértice.
   *
   */
-typedef struct dbVertice{
+typedef struct dbVertices{
 
-	dbPoint p;
+	double v1,v2,v3;
 
 	/* For hashtable */
 	int id;
 	UT_hash_handle hh;
 
 
-}dbVertice;
+}dbVertices;
 
-#endif /*_DB_VERTICE_H_*/
+dbVertices* getVertex(const char* arc);
+
+#endif /*_DB_VERTICES_H_*/
