@@ -32,22 +32,11 @@ dbVertex* getVertexID(dbSurface *surface, int vertex_id){
 
 	dbVertex *v;
 
+	// &surface->Vertices->id e msm coisa q passar &vertex_id
+
   	HASH_FIND_INT(surface->Vertices, &vertex_id, v);
 
-	printf("%lf %lf %lf\n",v->v1 , v->v2, v->v3);
+	printf("%.lf %.lf %.lf\n",v->v1 , v->v2, v->v3);
 
   	return v;
 }
-
-// dbPoint* getPointID(char* arc, int point_id){
-
-// 	dbSurface *s = (dbSurface*)malloc(sizeof(dbSurface));
-// 	s->Points = getPoint(arc);
-// 	dbPoint *p;
-
-//   	HASH_FIND_INT(s->Points, &point_id, p);
-
-// 	printf("%lf\n", p->z);
-
-//   	return p;
-// }

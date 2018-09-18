@@ -24,9 +24,8 @@ int main(int argc, char *argv[]){
         printf("id:%d %.lf %.lf %.lf\n",v->id,v->v1,v->v2,v->v3);
     }
 
-    getPointID(surface,2);
-    getVertexID(surface,5);
-    // getPointID("points.txt",2);
+    getPointID(surface,1);
+    getVertexID(surface,1);
 
 	return 0;
 }
