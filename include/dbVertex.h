@@ -9,7 +9,7 @@
   */
 typedef struct dbVertex{
 
-	double v1,v2,v3;
+	int v1,v2,v3;
 
 	/* For hashtable */
 	int id;

@@ -9,9 +9,10 @@
   */
 typedef struct dbEdge{
 
-    dbVertex *v1;
-    dbVertex *v2;
- 	// int VertexID[2];
+    int e1[2];
+    int e2[2];
+    int e3[2];
+ 	int VertexID[2];
 
  	// dbTriangle *t1;
  	// dbTriangle *t2;

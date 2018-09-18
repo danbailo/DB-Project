@@ -10,7 +10,7 @@ void error(){
 	printf("error!\n");
 }
 
-dbSurface* getSurface(char* arc1,char* arc2){
+dbSurface* setSurface(char* arc1,char* arc2){
 
 	dbSurface *ans = (dbSurface*)malloc(sizeof(dbSurface));
 	ans->Points = getPoint(arc1);
@@ -29,7 +29,7 @@ dbPoint* getPointID(dbSurface *surface, int point_id){
 	if( point_id < HASH_COUNT(surface->Points) ){
 	  	HASH_FIND_INT(surface->Points, &point_id, p);
 
-		printf("%lf %lf %lf\n",p->x , p->y, p->z);
+		printf("id: %d | %lf %lf %lf\n",point_id ,p->x , p->y, p->z);
   		return p;
 	}
 	error(); /* se o point id for menor ou maior que o numero de pontos */
@@ -46,11 +46,46 @@ dbVertex* getVertexID(dbSurface *surface, int vertex_id){
 	if( vertex_id < HASH_COUNT(surface->Vertices) ){
 	  	HASH_FIND_INT(surface->Vertices, &vertex_id, v);
 
-		printf("%.lf %.lf %.lf\n",v->v1 , v->v2, v->v3);
+		printf("id: %i | %i %i %i\n",vertex_id ,v->v1 , v->v2, v->v3);
 
 	  	return v;
 	}
 	error();
-	printf("the max vertex_id is %d\n",HASH_COUNT(surface->Vertices)-1); /* se o point id for menor ou maior que o numero de pontos */
+	printf("the max vertex_id is %i\n",HASH_COUNT(surface->Vertices)-1); /* se o point id for menor ou maior que o numero de pontos */
 	return NULL;
 }
+
+dbEdge* getEdge(dbSurface *surface, int vertex_id){
+
+	printf("\nsaida da egde\n");
+
+	dbEdge *e = (dbEdge*)malloc(sizeof(dbEdge));
+	dbVertex *v = getVertexID(surface,vertex_id);
+
+	// getVertexID(surface,vertex_id);
+	// printf("teste:%i\n",->v3);
+
+	e->e1[0] = v->v1;
+	e->e1[1] = v->v2;
+
+	e->e2[0] = v->v2;
+	e->e2[1] = v->v3;
+
+	e->e3[0] = v->v3;
+	e->e3[1] = v->v1;
+
+	for(int i=0; i<2; i++){
+		printf("%i ", e->e1[i]);
+	}
+	printf("\n");
+	for(int i=0; i<2; i++){
+		printf("%i ", e->e2[i]);
+	}
+	printf("\n");
+	for(int i=0; i<2; i++){
+		printf("%i ", e->e3[i]);
+	}
+
+	return NULL;
+}
+
