@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "dbPoint.h"
 #include "dbVertex.h"
 
 dbVertex* getVertex(const char* arc){

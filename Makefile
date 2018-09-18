@@ -13,8 +13,8 @@ all: libdb main
 libdb: \
 	$(BUILD)/dbPoint.o \
 	$(BUILD)/dbVertex.o \
-	$(BUILD)/dbEdge.o \
 	$(BUILD)/dbSurface.o \
+	$(BUILD)/dbEdge.o \
 	# $(BUILD)/dbTriangle.o \
 	
 	ar -rcs $(LIB)/libdb.a $(BUILD)/*.o

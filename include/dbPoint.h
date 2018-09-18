@@ -2,7 +2,6 @@
 #define _DBPOINT_H_
 
 #include "uthash.h"
-// #include "dbSurface.h"
 
 /*! Declaração da estrutura ponto, onde esta
   * contém os elementos x, y e z referentes ao espaço tridimensional;

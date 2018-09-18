@@ -2,7 +2,6 @@
 #define _DB_VERTEX_H_
 
 #include "dbPoint.h"
-#include "uthash.h"
 
 /*! Declaração da estrutura vértice, onde esta
   * contém um ponteiro do tipo "dbPoint" que é o ponto do vértice.

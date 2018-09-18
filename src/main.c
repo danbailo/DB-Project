@@ -1,13 +1,5 @@
 #include <stdio.h>
-#include "dbPoint.h"
-#include "dbVertex.h"
-#include "dbEdge.h"
-// #include "dbTriangle.h"
 #include "dbSurface.h"
-#include "uthash.h"
-
-// #include "dbSegment.h"
-// #include "dbFace.h"
 
 int main(int argc, char *argv[]){
 
@@ -24,8 +16,8 @@ int main(int argc, char *argv[]){
         printf("id:%d %.lf %.lf %.lf\n",v->id,v->v1,v->v2,v->v3);
     }
 
-    getPointID(surface,1);
-    getVertexID(surface,1);
+    getPointID(surface,48);
+    getVertexID(surface,95);
 
 	return 0;
 }

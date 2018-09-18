@@ -1,7 +1,5 @@
 #include <stdio.h>
-#include "uthash.h"
 #include "dbPoint.h"
-// #include "dbSurface.h"
 
 dbPoint* getPoint(const char* arc){
 	dbPoint* ans=NULL;
