@@ -25,6 +25,7 @@ int main(int argc, char *argv[]){
     }
 
     getPointID(surface,2);
+    getVertexID(surface,5);
     // getPointID("points.txt",2);
 
 	return 0;

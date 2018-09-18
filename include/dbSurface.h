@@ -23,7 +23,9 @@ typedef struct dbSurface{
 
 dbSurface* getSurface(char* arc1,char* arc2);
 
-dbPoint* getPointID(dbSurface *s,int point_id);
+dbPoint* getPointID(dbSurface *surface,int point_id);
+
+dbVertex* getVertexID(dbSurface *surface, int vertex_id);
 
 #endif /*_DB_SURFACE_*/
 

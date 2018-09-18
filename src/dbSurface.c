@@ -28,6 +28,16 @@ dbPoint* getPointID(dbSurface *s, int point_id){
   	return p;
 }
 
+dbVertex* getVertexID(dbSurface *surface, int vertex_id){
+
+	dbVertex *v;
+
+  	HASH_FIND_INT(surface->Vertices, &vertex_id, v);
+
+	printf("%lf %lf %lf\n",v->v1 , v->v2, v->v3);
+
+  	return v;
+}
 
 // dbPoint* getPointID(char* arc, int point_id){
 
