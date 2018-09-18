@@ -25,4 +25,6 @@ typedef struct dbEdge{
 
 }dbEdge;
 
+dbEdge *getEdge();
+
 #endif /*_DB_EDGE_*/

@@ -29,7 +29,7 @@ dbVertex* getVertex(const char* arc){
 		    buff+=n;
 
 		    int res=sscanf(buff,"%lf %lf %lf%n",&vaux->v1,&vaux->v2,&vaux->v3,&n);
-		    if(res!=3) break;  
+		    if(res!=3) break;
 			vaux->id=item;
 			item++;
 			dbVertex* s;

@@ -2,9 +2,9 @@
 #define _DB_SURFACE_
 
 #include "dbPoint.h"
-#include "dbVertice.h"
+#include "dbVertex.h"
 #include "dbEdge.h"
-#include "dbTriangle.h"
+// #include "dbTriangle.h"
 #include "uthash.h"
 
 /*! Declaração da estrutura ponto, onde esta
@@ -15,15 +15,13 @@
 typedef struct dbSurface{
 
 	dbPoint *Points;
-    dbVertice *Vertexes;
+    dbVertex *Vertices;
     dbEdge *Edges;
-    dbTriangle *Triangles;
-
-  	/* For hashtable */
-  	int id;
-  	UT_hash_handle hh;
-  	
+    // dbTriangle *Triangles;
+    
 }dbSurface;
+
+dbSurface* getSurface(char* arc1,char* arc2);
 
 #endif /*_DB_SURFACE_*/
 

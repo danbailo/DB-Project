@@ -14,8 +14,8 @@ libdb: \
 	$(BUILD)/dbPoint.o \
 	$(BUILD)/dbVertex.o \
 	$(BUILD)/dbEdge.o \
+	$(BUILD)/dbSurface.o \
 	# $(BUILD)/dbTriangle.o \
-	# $(BUILD)/dbSurface.o \
 	
 	ar -rcs $(LIB)/libdb.a $(BUILD)/*.o
 
