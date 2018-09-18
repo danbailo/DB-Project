@@ -59,31 +59,31 @@ dbEdge* getEdge(dbSurface *surface, int vertex_id){
 
 	printf("\nsaida da egde\n");
 
-	dbEdge *e = (dbEdge*)malloc(sizeof(dbEdge));
+	dbEdge e;
 	dbVertex *v = getVertexID(surface,vertex_id);
 
 	// getVertexID(surface,vertex_id);
 	// printf("teste:%i\n",->v3);
 
-	e->e1[0] = v->v1;
-	e->e1[1] = v->v2;
+	e.e1[0] = v->v1;
+	e.e1[1] = v->v2;
 
-	e->e2[0] = v->v2;
-	e->e2[1] = v->v3;
+	e.e2[0] = v->v2;
+	e.e2[1] = v->v3;
 
-	e->e3[0] = v->v3;
-	e->e3[1] = v->v1;
+	e.e3[0] = v->v3;
+	e.e3[1] = v->v1;
 
 	for(int i=0; i<2; i++){
-		printf("%i ", e->e1[i]);
+		printf("%i ", e.e1[i]);
 	}
 	printf("\n");
 	for(int i=0; i<2; i++){
-		printf("%i ", e->e2[i]);
+		printf("%i ", e.e2[i]);
 	}
 	printf("\n");
 	for(int i=0; i<2; i++){
-		printf("%i ", e->e3[i]);
+		printf("%i ", e.e3[i]);
 	}
 
 	return NULL;
