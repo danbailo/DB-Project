@@ -51,3 +51,7 @@ dbPoint* getPoint(const char* arc){
 	fclose(f);
 	return ans;
 }
+
+// int getPointID(dbPoint *p){
+// 	HASH_FIND_INT(p,)
+// }

@@ -23,6 +23,8 @@ typedef struct dbSurface{
 
 dbSurface* getSurface(char* arc1,char* arc2);
 
+dbPoint* getPointID(dbSurface *s,int point_id);
+
 #endif /*_DB_SURFACE_*/
 
 

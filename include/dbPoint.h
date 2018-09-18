@@ -20,4 +20,6 @@ typedef struct dbPoint{
 
 dbPoint * getPoint( const char* arc);
 
+// int getPointID(dbPoint *p);
+
 #endif /*_DBPOINT_H_*/

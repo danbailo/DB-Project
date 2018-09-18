@@ -4,6 +4,7 @@
 #include "dbEdge.h"
 // #include "dbTriangle.h"
 #include "dbSurface.h"
+#include "uthash.h"
 
 // #include "dbSegment.h"
 // #include "dbFace.h"
@@ -14,14 +15,17 @@ int main(int argc, char *argv[]){
     
     printf("\nPoints\n");
 	for(dbPoint* p = surface->Points; p != NULL; p=(dbPoint*)(p->hh.next)) {
-        printf("%lf %lf %lf\n",p->x,p->y,p->z);
+        printf("id:%d %lf %lf %lf\n",p->id,p->x,p->y,p->z);
     }
 
 
     printf("\nVertices\n");
 	for(dbVertex* v = surface->Vertices; v != NULL; v=(dbVertex*)(v->hh.next)) {
-        printf("%.lf %.lf %.lf\n",v->v1,v->v2,v->v3);
+        printf("id:%d %.lf %.lf %.lf\n",v->id,v->v1,v->v2,v->v3);
     }
+
+    getPointID(surface,2);
+    // getPointID("points.txt",2);
 
 	return 0;
 }
