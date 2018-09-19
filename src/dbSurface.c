@@ -8,6 +8,7 @@
 
 void error(){
 	printf("error!\n");
+	// exit(-1);
 }
 
 dbSurface* setSurface(char* arc1,char* arc2){
@@ -43,8 +44,10 @@ dbVertex* getVertexID(dbSurface *surface, int vertex_id){
 
 	// printf("count:%d\n",HASH_COUNT(surface->Vertices));
 
-	if( vertex_id < HASH_COUNT(surface->Vertices) ){
-	  	HASH_FIND_INT(surface->Vertices, &vertex_id, v);
+
+	HASH_FIND_INT(surface->Vertices, &vertex_id, v);
+	
+	if( v != NULL ){
 
 		printf("id: %i | %i %i %i\n",vertex_id ,v->v1 , v->v2, v->v3);
 
@@ -55,37 +58,30 @@ dbVertex* getVertexID(dbSurface *surface, int vertex_id){
 	return NULL;
 }
 
-dbEdge* getEdge(dbSurface *surface, int vertex_id){
+dbEdge* setEdge(dbSurface *surface, int edge_id, int vertex_origin, int vertex_extreme){
 
 	printf("\nsaida da egde\n");
 
-	dbEdge e;
-	dbVertex *v = getVertexID(surface,vertex_id);
+	dbEdge *temp = NULL;
+	dbEdge *e = (dbEdge*)malloc(sizeof(dbEdge));
+	e->id = edge_id;
+	
+	dbVertex *v1 = getVertexID(surface,vertex_origin);
+	dbVertex *v2 = getVertexID(surface,vertex_extreme);
 
-	// getVertexID(surface,vertex_id);
-	// printf("teste:%i\n",->v3);
+	if(v1 == NULL) error();
+	if(v2 == NULL) error();
+	
+	e->v1 = v1;
+	e->v2 = v2;
 
-	e.e1[0] = v->v1;
-	e.e1[1] = v->v2;
-
-	e.e2[0] = v->v2;
-	e.e2[1] = v->v3;
-
-	e.e3[0] = v->v3;
-	e.e3[1] = v->v1;
-
-	for(int i=0; i<2; i++){
-		printf("%i ", e.e1[i]);
-	}
-	printf("\n");
-	for(int i=0; i<2; i++){
-		printf("%i ", e.e2[i]);
-	}
-	printf("\n");
-	for(int i=0; i<2; i++){
-		printf("%i ", e.e3[i]);
+	HASH_FIND_INT(temp, &edge_id, surface->Edges);
+	if(temp != NULL){
+		printf("colisão\n");
+		error();
 	}
 
-	return NULL;
+	HASH_ADD_INT(surface->Edges, id, e);
+
+	return e;
 }
-

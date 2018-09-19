@@ -21,7 +21,9 @@ int main(int argc, char *argv[]){
     getPointID(surface,48);
     getVertexID(surface,95);
 
-    getEdge(surface,5);
+    dbEdge* e = setEdge(surface,0,0,1000000);
+
+    printf("%d\n",e->id);
 
     printf("\n");
 

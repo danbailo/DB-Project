@@ -27,7 +27,8 @@ dbPoint* getPointID(dbSurface *surface,int point_id);
 
 dbVertex* getVertexID(dbSurface *surface, int vertex_id);
 
-dbEdge* getEdge(dbSurface *surface, int vertex_id);
+dbEdge* setEdge(dbSurface *surface, int edge_id, int vertex_origin, int vertex_extreme);
+
 
 #endif /*_DB_SURFACE_*/
 

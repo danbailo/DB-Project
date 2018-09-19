@@ -27,14 +27,16 @@ dbPoint* getPoint(const char* arc){
 			paux=(dbPoint*)malloc(sizeof(dbPoint));
 		    buff+=n;
 
-		    int res=sscanf(buff,"%lf %lf %lf%n",&paux->x,&paux->y,&paux->z,&n);
-		    if(res!=3) break;  
-			paux->id=item;
+		    int res = sscanf(buff,"%lf %lf %lf%n",&paux->x,&paux->y,&paux->z,&n);
+		    if(res != 3) break;
+
+			paux->id = item;
 			item++;
-			dbPoint*s;
+			dbPoint* s;
   			HASH_FIND_INT(ans, &paux->id, s);
-  			if(s!=NULL){
-  				printf("colisão!\n");exit(-1);
+  			if(s != NULL){
+  				printf("colisão!\n");
+  				exit(-1);
   			}
 
 		    HASH_ADD_INT(ans, id, paux);
