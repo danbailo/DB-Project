@@ -4,7 +4,7 @@
 #include "dbPoint.h"
 #include "dbVertex.h"
 #include "dbEdge.h"
-// #include "dbTriangle.h"
+#include "dbTriangle.h"
 #include "uthash.h"
 
 /*! Declaração da estrutura ponto, onde esta
@@ -17,7 +17,7 @@ typedef struct dbSurface{
 	dbPoint *Points;
     dbVertex *Vertices;
     dbEdge *Edges;
-    // dbTriangle *Triangles;
+    dbTriangle *Triangles;
     
 }dbSurface;
 
@@ -29,6 +29,7 @@ dbVertex* getVertexID(dbSurface *surface, int vertex_id);
 
 dbEdge* setEdge(dbSurface *surface, int edge_id, int vertex_origin, int vertex_extreme);
 
+dbTriangle* setTriangle(dbSurface *surface, int triangle_id, dbEdge *e1, dbEdge *e2, dbEdge *e3);
 
 #endif /*_DB_SURFACE_*/
 

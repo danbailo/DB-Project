@@ -18,12 +18,29 @@ int main(int argc, char *argv[]){
 
     printf("\n");
 
-    getPointID(surface,48);
+    getPointID(surface,5);
     getVertexID(surface,95);
 
-    dbEdge* e = setEdge(surface,0,0,1000000);
+    dbEdge *e1 = setEdge(surface,0,0,1);
+    dbEdge *e2 = setEdge(surface,1,1,2);
+    dbEdge *e3 = setEdge(surface,2,2,0);
 
-    printf("%d\n",e->id);
+    dbTriangle *triangle = setTriangle(surface,0,e1,e2,e3);
+
+    printf("%i\n", triangle->id);
+
+    printf("vertice\n");
+    printf("%i ", triangle->e1->v1->v1);
+    printf("%i ", triangle->e1->v1->v2);
+    printf("%i\n", triangle->e1->v1->v3);
+
+    printf("%i ", triangle->e2->v1->v1);
+    printf("%i ", triangle->e2->v1->v2);
+    printf("%i\n", triangle->e2->v1->v3);
+
+    printf("%i ", triangle->e3->v1->v1);
+    printf("%i ", triangle->e3->v1->v2);
+    printf("%i\n", triangle->e3->v1->v3);
 
     printf("\n");
 

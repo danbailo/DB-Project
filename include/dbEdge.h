@@ -11,7 +11,8 @@ typedef struct dbEdge{
 
 	dbVertex *v1;
 	dbVertex *v2;
- 	// int VertexID[2];
+	dbVertex *v3;
+
 
  	/* For hashtable */
  	int id;

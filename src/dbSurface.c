@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include "dbPoint.h"
-#include "dbVertex.h"
+// #include "dbPoint.h"
+// #include "dbVertex.h"
 #include "dbSurface.h"
-#include "dbEdge.h"
+// #include "dbEdge.h"
 // #include "dbTriangle.h"
-#include "uthash.h"
+// #include "uthash.h"
 
 void error(){
 	printf("error!\n");
@@ -27,8 +27,8 @@ dbPoint* getPointID(dbSurface *surface, int point_id){
 
 	// printf("count:%d\n",HASH_COUNT(surface->Points));
 
-	if( point_id < HASH_COUNT(surface->Points) ){
-	  	HASH_FIND_INT(surface->Points, &point_id, p);
+	HASH_FIND_INT(surface->Points, &point_id, p);
+	if( p != NULL ){
 
 		printf("id: %d | %lf %lf %lf\n",point_id ,p->x , p->y, p->z);
   		return p;
@@ -84,4 +84,25 @@ dbEdge* setEdge(dbSurface *surface, int edge_id, int vertex_origin, int vertex_e
 	HASH_ADD_INT(surface->Edges, id, e);
 
 	return e;
+}
+
+dbTriangle* setTriangle(dbSurface *surface, int triangle_id, dbEdge *e1, dbEdge *e2, dbEdge *e3){
+
+	dbTriangle *temp = NULL;
+	dbTriangle *triangle = (dbTriangle*)malloc(sizeof(dbTriangle));
+
+    triangle->e1 = e1;
+    triangle->e2 = e2;
+    triangle->e3 = e3;
+
+    HASH_FIND_INT(temp, &triangle_id, surface->Triangles);
+
+	if(temp != NULL){
+		printf("colisão\n");
+		error();
+	}
+
+	HASH_ADD_INT(surface->Triangles, id, triangle);
+
+    return triangle;
 }
