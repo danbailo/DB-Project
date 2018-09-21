@@ -25,11 +25,13 @@ dbSurface* setSurface(char* arc1,char* arc2);
 
 dbPoint* getPointID(dbSurface *surface,int point_id);
 
-dbVertex* getVertexID(dbSurface *surface, int vertex_id);
+dbVertex* getVertexID(dbVertex *vertices, int vertex_id);
 
-dbEdge* setEdge(dbSurface *surface, int edge_id, int vertex_origin, int vertex_extreme);
+dbEdge* setEdge(dbVertex *v,dbEdge **e, int edge_id, int vertex_origin, int vertex_extreme);
 
-dbTriangle* setTriangle(dbSurface *surface, int triangle_id, dbEdge *e1, dbEdge *e2, dbEdge *e3);
+dbTriangle* setTriangle(dbTriangle *surface, int triangle_id, dbEdge *e1, dbEdge *e2, dbEdge *e3);
+
+dbTriangle* getTriangle(dbVertex *v, dbEdge **e);
 
 #endif /*_DB_SURFACE_*/
 

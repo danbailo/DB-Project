@@ -9,10 +9,8 @@
   */
 typedef struct dbEdge{
 
-	dbVertex *v1;
-	dbVertex *v2;
-	dbVertex *v3;
-
+	int v1;
+	int v2;
 
  	/* For hashtable */
  	int id;
