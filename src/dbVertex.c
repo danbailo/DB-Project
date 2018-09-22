@@ -27,8 +27,9 @@ dbVertex* getVertex(const char* arc){
 			vaux=(dbVertex*)malloc(sizeof(dbVertex));
 		    buff+=n;
 
-		    int res=sscanf(buff,"%i %i %i%n",&vaux->v1,&vaux->v2,&vaux->v3,&n);
-		    if(res!=3) break;
+		    int res = sscanf(buff,"%i %i %i%n",&vaux->v1,&vaux->v2,&vaux->v3,&n);
+		    if(res != 3) break;
+		    
 			vaux->id=item;
 			item++;
 			dbVertex* s;
